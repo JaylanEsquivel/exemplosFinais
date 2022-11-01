@@ -31,5 +31,23 @@ Console.WriteLine("______________________________________________________");
 
 dynamic valorDinamico = 1.22M;
 
-
 Console.WriteLine($"Tipo: {valorDinamico.GetType()}, valor: {valorDinamico}");
+
+// CLASSES GENERICAS
+Console.WriteLine("______________________________________________________");
+
+MeuArray<int> arrayInteiros = new MeuArray<int>();
+arrayInteiros.AdicionarElementoArray(30);
+Console.WriteLine(arrayInteiros[0]);
+
+MeuArray<string> arrayString = new MeuArray<string>();
+arrayString.AdicionarElementoArray("TESTES");
+Console.WriteLine(arrayString[0]);
+
+// METODOS DE EXTENSOES
+Console.WriteLine("______________________________________________________");
+
+    int num = 1;
+    bool ehpar = false;
+    ehpar = num.EhPah();
+    Console.WriteLine($"o numero {num} é "+ (ehpar ? "par" : "Impar"));
